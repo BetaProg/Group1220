@@ -1,0 +1,49 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "srinivas",
+      "useremail": "srinivasgovindu@ymail.com"
+    },
+    {
+      "username": "John",
+      "useremail": "Johndoe@email.com",
+      "id": 2
+    },
+    {
+      "username": "John",
+      "useremail": "Johndoe@email.com",
+      "id": 3
+    },
+    {
+      "username": "S3",
+      "useremail": "s3@email.com",
+      "id": 4
+    },
+    {
+      "username": "s4",
+      "useremail": "s4@email.com",
+      "id": 5
+    },
+    {
+      "username": "s5",
+      "useremail": "s5@email.com",
+      "id": 6
+    },
+    {
+      "username": "s5",
+      "useremail": "s5@email.com",
+      "id": 7
+    },
+    {
+      "username": "s6",
+      "useremail": "s6@email.com",
+      "id": 8
+    },
+    {
+      "username": null,
+      "useremail": null,
+      "id": 9
+    }
+  ]
+}
