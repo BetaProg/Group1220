@@ -1,3 +1,50 @@
-<p>
-  creategroup works!
-</p>
+<button [routerLink]="['../groupslist']" routerlinkActivated="active">Back to groups list</button>
+
+<h2>Angular 6 Forms</h2>
+<form [formGroup]="angularForm">
+  <div class="form-group">
+    <label>Group Name:
+      <input formControlName="groupName">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Search Users:
+      <input formControlName="searchUsers" [(ngModel)]="queryString">
+    </label>
+  </div>
+  <p *ngIf="(users | filterdata: queryString : 'username').length === 0">No matching elements</p>
+	<table border =1 *ngIf="queryString?.length">
+		<thead>
+			<tr>
+				<th style="width:40px;max-width:40px;">#</th>
+				<th style="width:60px;max-width:100px;">Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let ex of  users| filterdata: queryString : 'username' ; let i = index ">
+				<td>{{i+1}}</td>
+				<td>{{ex.username}}</td>
+			</tr>
+		</tbody>
+	</table>
+  
+  
+  
+  
+  
+  <!-- <tr *ngFor="let ex of  users| filterdata: queryString : 'username' ; let i = index "> -->
+      <!-- <td>{{i+1}}</td> -->
+      <!-- <td>{{ex.username}}</td> -->
+    <!-- </tr> -->
+  <!-- <p *ngFor="let user of users | filterBy: user">{{ user.username }}</p> -->
+ 
+  <!-- in case you want to show empty message -->
+  <!-- <li *ngIf="(users | filterBy: userDetails).length === 0">No matching elements</li> -->
+
+  <div class="form-group">
+    <input type="submit" value="Save group" (click)="SearchUsers()">
+  </div>
+  <div>
+    <h4 [hidden]="!isSuccess">Group Created Successfully</h4>
+  </div>
+</form>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Angroups
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
@@ -26,7 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# Group1220
-Reusable components for groups creation in Angular 6 using JSON-Server
->>>>>>> 2b8898fdbf0152301d5050731973fb955a6da98c

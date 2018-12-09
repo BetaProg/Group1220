@@ -31,15 +31,19 @@
       "id": 6
     },
     {
-      "username": "s7",
-      "useremail": "s7@email.com",
+      "username": "s5",
+      "useremail": "s5@email.com",
       "id": 7
-    }
-  ],
-  "Groups": [
+    },
     {
-      "groupname": "G1",
-      "id": 1
+      "username": "s6",
+      "useremail": "s6@email.com",
+      "id": 8
+    },
+    {
+      "username": null,
+      "useremail": null,
+      "id": 9
     }
   ]
 }
