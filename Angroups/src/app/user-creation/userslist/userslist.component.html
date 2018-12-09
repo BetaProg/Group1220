@@ -1,0 +1,7 @@
+<!-- <button [routerLink]="['../addUserUrl']" routerlinkActivated="active">Add user</button> -->
+<button [routerLink]=[addUserUrl] routerlinkActivated="active">Add user</button>
+
+<h5>Users list</h5>
+<ul>
+	<li *ngFor="let user of users">{{user["username"]}}</li>
+</ul>
