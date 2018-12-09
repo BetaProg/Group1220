@@ -1,0 +1,25 @@
+<button [routerLink]="['../userlist']" routerlinkActivated="active">Back to users list</button>
+
+<p>
+  createuser works!
+</p>
+
+<h2>Angular 6 Forms</h2>
+<form [formGroup]="angularForm">
+  <div class="form-group">
+    <label>User Name:
+      <input formControlName="username">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>User Email:
+      <input formControlName="useremail">
+    </label>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Save user" (click)="SaveUser()">
+  </div>
+  <div>
+    <h4 [hidden]="!isSuccess">User Created Successfully</h4>
+  </div>
+</form>
