@@ -26,13 +26,12 @@ export class CreateuserComponent implements OnInit {
 			"useremail": this.angularForm.value.useremail
 		}
 		this.http.post(this.userUrl, this.usersObj).subscribe((res: Response)=>{
-      console.log(res);
-      if(res.statusText == "Created"){
-        this.isSuccess = true;
-        this.angularForm.reset();
-      }
-		}
-		)
+			console.log(res);
+			if(res.statusText == "Created"){
+				this.isSuccess = true;
+				this.angularForm.reset();
+			}
+		})
 	}
   
   constructor(private http:Http) { }

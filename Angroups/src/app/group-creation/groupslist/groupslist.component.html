@@ -1,4 +1,9 @@
-<p>
-  groupslist works!
-</p>
+<div>
+	<h4>Groups List</h4>
+	<ul>
+		<li *ngFor="let group of groups" (click)="showGroupDetails(group)">
+			<b id={{group.id}} class="groupname">{{group.groupname}}</b>
+		</li>
+	</ul>
+</div>
 <button [routerLink]=[addGroupUrl] routerlinkActivated="active">Add Group</button>

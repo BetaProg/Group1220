@@ -1,18 +1,23 @@
 <button [routerLink]="['../groupslist']" routerlinkActivated="active">Back to groups list</button>
 
 <h2>Angular 6 Forms</h2>
-<form [formGroup]="angularForm">
+<form [formGroup]="groupForm2">
   <div class="form-group">
     <label>Group Name:
-      <input formControlName="groupName">
+      <input type="text" formControlName="groupName">
     </label>
   </div>
   <div class="form-group">
     <label>Search Users:
-      <input formControlName="searchUsers" [(ngModel)]="queryString">
+      <input type="text" formControlName="query" [(ngModel)]="queryString">
     </label>
   </div>
   <p *ngIf="(users | filterdata: queryString : 'username').length === 0">No matching elements</p>
+  <!-- <select value="username"> -->
+	<!-- <option *ngFor="let ex of  users| filterdata: queryString : 'username' ; let i = index "> -->
+		<!-- {{ex.username}} -->
+	<!-- </option> -->
+  <!-- </select> -->
 	<table border =1 *ngIf="queryString?.length">
 		<thead>
 			<tr>
@@ -23,10 +28,17 @@
 		<tbody>
 			<tr *ngFor="let ex of  users| filterdata: queryString : 'username' ; let i = index ">
 				<td>{{i+1}}</td>
-				<td>{{ex.username}}</td>
+				<td>
+					<input type="checkbox" (change)="addToArray($event)" value={{ex.username}} id={{ex.id}} name={{ex.id}} >
+					<label for={{ex.id}} >{{ex.username}}</label>
+				</td>
 			</tr>
 		</tbody>
 	</table>
+	
+	<ul>
+		<li *ngFor="let selected_user of selected_users">{{selected_user}}</li>
+	</ul>
   
   
   
@@ -42,7 +54,7 @@
   <!-- <li *ngIf="(users | filterBy: userDetails).length === 0">No matching elements</li> -->
 
   <div class="form-group">
-    <input type="submit" value="Save group" (click)="SearchUsers()">
+    <input type="submit" value="Save group" (click)="SaveGroup()">
   </div>
   <div>
     <h4 [hidden]="!isSuccess">Group Created Successfully</h4>

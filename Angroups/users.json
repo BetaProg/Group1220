@@ -40,6 +40,36 @@
     {
       "groupname": "G1",
       "id": 1
+    },
+    {
+      "groupname": null,
+      "groupmembers": [
+        "srinivas"
+      ],
+      "id": 2
+    },
+    {
+      "groupname": "Group2",
+      "groupmembers": [
+        "S3"
+      ],
+      "id": 3
+    },
+    {
+      "groupname": "Group3",
+      "groupmembers": [
+        "srinivas",
+        "John"
+      ],
+      "id": 4
+    },
+    {
+      "groupname": "Group4",
+      "groupmembers": [
+        "s5",
+        "s4"
+      ],
+      "id": 5
     }
   ]
 }
